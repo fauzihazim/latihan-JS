@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline, internal, external</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- inline -->
+    <button onclick="alert('Hello World!')">click me!</button>
+    <!-- internal -->
+    <button id="button2" onclick="showAlertButton2()">button 2</button>
+    <script>
+        function showAlertButton2() {
+            alert("Alert Button 2");
+        }
+    </script>
+    <!-- external -->
+    <button id="button3" onclick="showAlertButton3()">button 3</button>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

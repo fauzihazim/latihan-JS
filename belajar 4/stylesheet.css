@@ -1,0 +1,27 @@
+#imageBlue {
+    width: 500px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#buttonBlue {
+    background-color: #44569E;
+    float: left;
+    margin: 0 5px;
+}
+
+#buttonGreen {
+    background-color: #01B7B9;
+    float: left;
+    margin: 0 5px;
+}
+
+#buttonRed {
+    background-color: #FE8084;
+    float: left;
+    margin: 0 5px;
+}

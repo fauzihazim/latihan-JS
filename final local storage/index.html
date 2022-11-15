@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <p style="font-size: 25px;">Student</p>
+    <form action="">
+        <p>Input New Student</p>
+        <label for="">Id Student</label>
+        <input type="number" id="inputIdStudent">
+        <label for="">Name Student</label>
+        <input type="text" id="inputNameStudent">
+        <button id="submitNewStudent">Submit !</button>
+    </form>
+    <form action="">
+        <p>Select Student by ID</p>
+        <label for="">Input Id Student</label>
+        <input type="number" id="selectIdStudent">
+        <button id="submitSelectIdStudent">Search</button>
+    </form>
+    <p id="selectedStudent"></p>
+    <form action="">
+        <p>Delete Student by ID</p>
+        <label for="">Select Id Student</label>
+        <input type="number" id="inputDeleteID">
+        <button id="deleteId">Delete</button>
+    </form>
+    <p id="deletedId"></p>
+    <script>
+        document.getElementById("submitNewStudent").onclick = function() {
+            var idStudent = document.getElementById("inputIdStudent").value;
+            var namaStudent = document.getElementById("inputNameStudent").value;
+            localStorage.setItem(idStudent, namaStudent);
+        }
+        document.getElementById("submitSelectIdStudent").onclick = function() {
+            var selectedIdStudent = document.getElementById("selectIdStudent").value;
+            document.getElementById("selectedStudent").innerHTML = localStorage.getItem(selectedIdStudent);
+        }
+        document.getElementById("deleteId").onclick = function() {
+            var selectDeleteId = document.getElementById("inputDeleteID").value;
+            // document.getElementById("selectedStudent").innerHTML = selectedIdStudent;
+            // document.getElementById("deletedId").innerHTML = selectDeleteId;
+            localStorage.removeItem(selectDeleteId);
+            alert("Deleted");
+        }
+    </script>
+</body>
+</html>
